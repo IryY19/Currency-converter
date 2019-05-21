@@ -96,50 +96,30 @@
             <p>
               EUR -
               <? 
-                define("LINK" , 'https://api.privatbank.ua/p24api/pubinfo?exchange&coursid=11');
+                define("LINK" , 'https://api.privatbank.ua/p24api/pubinfo?exchange&json&coursid=11');
                 $data = file_get_contents(LINK);
                 $var = json_decode($data, TRUE);
-                $three = $var["EUR_UAH"]; 
+                $three = $var[1]['buy']; 
                 echo $three;
               ?> 
             </p>
             <p>
               USD - 
               <? 
-                define("LINK" , 'https://free.currconv.com/api/v7/convert?q=USD_UAH&compact=ultra&apiKey=58b5e05dcad94a7ed81f');
+                define("LINK" , 'https://api.privatbank.ua/p24api/pubinfo?exchange&json&coursid=11');
                 $data = file_get_contents(LINK);
                 $var = json_decode($data, TRUE);
-                $three = $var["USD_UAH"]; 
+                $three = $var[0]['buy']; 
                 echo $three;
               ?>
             </p>
             <p>
-              PLN - 
+              RUB - 
               <? 
-                define("LINK" , 'https://free.currconv.com/api/v7/convert?q=PLN_UAH&compact=ultra&apiKey=58b5e05dcad94a7ed81f');
+                define("LINK" , 'https://api.privatbank.ua/p24api/pubinfo?exchange&json&coursid=11');
                 $data = file_get_contents(LINK);
                 $var = json_decode($data, TRUE);
-                $three = $var["PLN_UAH"]; 
-                echo $three;
-              ?> 
-            </p>
-            <p>
-              CZK -
-              <? 
-                define("LINK" , 'https://free.currconv.com/api/v7/convert?q=CZK_UAH&compact=ultra&apiKey=58b5e05dcad94a7ed81f');
-                $data = file_get_contents(LINK);
-                $var = json_decode($data, TRUE);
-                $three = $var["CZK_UAH"]; 
-                echo $three;
-              ?> 
-            </p>
-            <p>
-              KRW -
-              <? 
-                define("LINK" , 'https://free.currconv.com/api/v7/convert?q=KRW_UAH&compact=ultra&apiKey=58b5e05dcad94a7ed81f');
-                $data = file_get_contents(LINK);
-                $var = json_decode($data, TRUE);
-                $three = $var["KRW_UAH"]; 
+                $three = $var[2]['buy']; 
                 echo $three;
               ?> 
             </p>
