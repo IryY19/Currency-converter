@@ -96,20 +96,20 @@
             <p>
               EUR -
               <? 
-                define("LINK" , 'https://api.privatbank.ua/p24api/pubinfo?exchange&json&coursid=11');
-                $data = file_get_contents(LINK);
-                $var = json_decode($data, TRUE);
-                $three = $var[1]['buy']; 
+                define("LINK1" , 'https://free.currconv.com/api/v7/convert?q=EUR_UAH&compact=ultra&apiKey=58b5e05dcad94a7ed81f');
+                $data1 = file_get_contents(LINK1);
+                $var1 = json_decode($data1, TRUE);
+                $three1 = $var1["EUR_UAH"]; 
                 echo $three;
               ?> 
             </p>
             <p>
               USD - 
               <? 
-                define("LINK" , 'https://api.privatbank.ua/p24api/pubinfo?exchange&json&coursid=11');
+                define("LINK" , 'https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json');
                 $data = file_get_contents(LINK);
                 $var = json_decode($data, TRUE);
-                $three = $var[0]['buy']; 
+                $three = $var[27]['rate']; 
                 echo $three;
               ?>
             </p>

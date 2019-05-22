@@ -20,11 +20,15 @@
       include 'new/header.php'
     ?>
     <?
-      include 'new/index.php';
+      include 'new/index_body.php';
     ?>
 
     <?
       include 'new/button.php';
+    ?>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <?
+      include 'new/footer.php';
     ?>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
