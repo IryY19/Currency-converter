@@ -20,7 +20,7 @@
         <div class="row">
           <p></p>
           <div class="col-md-2 text-center">
-            <input name="num" placeholder="Введіть суму" type="number" min="0" class="form-control">
+            <input name="num" placeholder="Enter amount" type="number" min="0" class="form-control">
           </div>
           <div class="col-md-3 text-center">
             <div class="input-group">
@@ -45,6 +45,19 @@
                 <option value="USD">USD</option>
                 <option value="RUB">RUB</option>
                 <option value="UAH">UAH</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+                <option value="CHF">CHF</option>
+                <option value="JPY">JPY</option>
+                <option value="CAD">CAD</option>
+                <option value="BYN">BYN</option>
+                <option value="BGN">BGN</option>
+                <option value="HKD">HKD</option>
+                <option value="DKK">DKK</option>
+                <option value="CNY">CNY</option>
+                <option value="CZK">CZK</option>
+                <option value="KRW">KRW</option>
+                <option value="XAU">XAU</option>
               </select>
               <button name="nadya" class="btn btn-outline-dark"><-></button>
               <select name="two" class="form-control" id="exampleFormControlSelect1">
@@ -66,11 +79,25 @@
                 ?>
                 </option>
                 <option value="USD">USD</option>
+                <option value="RUB">RUB</option>
                 <option value="UAH">UAH</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+                <option value="CHF">CHF</option>
+                <option value="JPY">JPY</option>
+                <option value="CAD">CAD</option>
+                <option value="BYN">BYN</option>
+                <option value="BGN">BGN</option>
+                <option value="HKD">HKD</option>
+                <option value="DKK">DKK</option>
+                <option value="CNY">CNY</option>
+                <option value="CZK">CZK</option>
+                <option value="KRW">KRW</option>
+                <option value="XAU">XAU</option>
               </select>
             </div>
             <br>
-            <button name="cv" class="btn btn-outline-dark">Конвертувати</button>
+            <button name="cv" class="btn btn-outline-dark">Convert</button>
           </div>
           <div class="col-md-2">
             <nav aria-label="...">
@@ -94,32 +121,52 @@
           </div>
           <div class="text-right col-md-2 alert alert-dark" style=" padding: 15px; opacity: 0.7;">
             <p>
-              EUR -
-              <? 
-                define("LINK1" , 'https://free.currconv.com/api/v7/convert?q=EUR_UAH&compact=ultra&apiKey=58b5e05dcad94a7ed81f');
-                $data1 = file_get_contents(LINK1);
-                $var1 = json_decode($data1, TRUE);
-                $three1 = $var1["EUR_UAH"]; 
-                echo $three;
-              ?> 
-            </p>
-            <p>
-              USD - 
+              USD -
               <? 
                 define("LINK" , 'https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json');
                 $data = file_get_contents(LINK);
                 $var = json_decode($data, TRUE);
                 $three = $var[27]['rate']; 
                 echo $three;
+              ?> 
+            </p>
+            <p>
+              EUR - 
+              <? 
+                define("LINK" , 'https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json');
+                $data = file_get_contents(LINK);
+                $var = json_decode($data, TRUE);
+                $three = $var[34]['rate']; 
+                echo $three;
               ?>
             </p>
             <p>
               RUB - 
               <? 
-                define("LINK" , 'https://api.privatbank.ua/p24api/pubinfo?exchange&json&coursid=11');
+                define("LINK" , 'https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json');
                 $data = file_get_contents(LINK);
                 $var = json_decode($data, TRUE);
-                $three = $var[2]['buy']; 
+                $three = $var[19]['rate']; 
+                echo $three;
+              ?> 
+            </p>
+            <p>
+              CZK - 
+              <? 
+                define("LINK" , 'https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json');
+                $data = file_get_contents(LINK);
+                $var = json_decode($data, TRUE);
+                $three = $var[4]['rate']; 
+                echo $three;
+              ?> 
+            </p>
+            <p>
+              PLN - 
+              <? 
+                define("LINK" , 'https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json');
+                $data = file_get_contents(LINK);
+                $var = json_decode($data, TRUE);
+                $three = $var[35]['rate']; 
                 echo $three;
               ?> 
             </p>

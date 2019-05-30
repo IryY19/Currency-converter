@@ -35,6 +35,9 @@
             <div class="col-md-3">
               <h5>Result</h5>
             </div>
+            <div class="col-md-3">
+              <h5>Date</h5>
+            </div>
           </div>
         <?php
           for($l = 0; $l < $i; $l++){
@@ -55,17 +58,13 @@
               <h5><? print $post['in']?></h5>
             </div>
             <div class="col-md-2">
-              <h5><? print $post['sum']?></h5>
+              <h5><? print $post['cv']?></h5>
             </div>
             <div class="col-md-3">
-              <h5>
-                <? 
-                  $num = $post['num'];
-                  $sum = $post['sum'];
-                  $end = $num * $sum; 
-                  print $end;
-                ?> 
-              </h5>
+              <h5><?print $post['sum'];?></h5>
+            </div>
+            <div class="col-md-3">
+              <h5><?print $post['date'];?></h5>
             </div>
           </div>
         <?
@@ -74,6 +73,6 @@
           }
         }
         ?>
-        <button style="margin-left: 60px; margin-top: 5px; " name="more" class="btn btn-danger">Більше</button>
+        <button style="margin-left: 60px; margin-top: 5px; " name="more" class="btn btn-danger">More</button>
       </form>
     </div>

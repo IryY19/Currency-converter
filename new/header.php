@@ -11,10 +11,10 @@
                 <h3> urrency converter</h3>
             </div>
             <div class="col-md-3" align="right">
-                <button onclick="window.location.href='/Iry%20Y/conversion/index.php'" style="width: 180px; height: 50px; border-radius: 10px;" aling="right" type="button" class="btn btn-outline-dark" >Main</button>         
+                <button onclick="window.location.href='/Currency-converter/Currency-converter/index.php'" style="width: 180px; height: 50px; border-radius: 10px;" aling="right" type="button" class="btn btn-outline-dark" >Main</button>         
             </div>
             <div class="col-md-2" align="right">
-                <button onclick="window.location.href='/Iry%20Y/conversion/history.php?i=10'" style="width: 180px; height: 50px; border-radius:  10px;" aling="right" type="button" class="btn btn-outline-dark">History</button>         
+                <button onclick="window.location.href='/Currency-converter/Currency-converter/history.php?i=10'" style="width: 180px; height: 50px; border-radius:  10px;" aling="right" type="button" class="btn btn-outline-dark">History</button>         
             </div>
         </div>
    

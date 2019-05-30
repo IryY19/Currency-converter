@@ -1,7 +1,7 @@
 <?php
     if(isset($_POST['nadya'])){
 
-    $today = date("y.m.d / H:i:s");
+    $today = date("d.m.y / H:i:s");
     $two = $_POST['one'];
     $one = $_POST['two'];
     $num = $_POST['num'];
@@ -21,7 +21,7 @@
     }
     if(isset($_POST['cv'])){
 
-    $today = date("y.m.d / H:i:s");
+    $today = date("d.m.y / H:i:s");
     $one = $_POST['one'];
     $two = $_POST['two'];
     $num = $_POST['num'];

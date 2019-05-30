@@ -26,7 +26,7 @@
     <?
       include 'new/button.php';
     ?>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <?
       include 'new/footer.php';
     ?>
